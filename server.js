@@ -1,37 +1,36 @@
-const express = require("express"); //
-const path = require("path");
-const PORT = process.env.PORT || 3001;  //
-const app = express(); //
+
+const express = require("express");
 
 
-//
-// Include express middleware 
+const mongoose = require("mongoose");
+
+const routes = require("./routes");
+const app = express();
+const PORT = process.env.PORT || 3001;
+
+
+// add express routes middleware 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// Add routes for both api and view
-app.use(routes);
-
-//
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
+// Add routes, for api
+app.use(routes);
 
-// Send every request to the React app
-// Define any API routes before this runs
-app.get("*", function(req, res) {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
-});
+// Connect to a local Mongo DB or to the Heroku mongoose db
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist",
+{
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true,
+  useFindAndModify: false
+}
+);
 
-
-
-// Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/googlebooks");
-
-
-
-// start the api server
+// Start the API server
 app.listen(PORT, function() {
-  console.log(`🌎 ==> API server now listening on port ${PORT}!`);
+  console.log(`Server now listening on PORT ${PORT}!`);
 });
