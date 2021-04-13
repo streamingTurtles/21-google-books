@@ -1,6 +1,6 @@
 import axios from "axios";
 
-// google books api key
+// my google books api key
 const apiKey = "AIzaSyCyG_qBeit_4b5tfm0mjC4l3Tt7SetX6BU"
 
   // Send request to google books to find searched book

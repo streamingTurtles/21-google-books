@@ -105,7 +105,7 @@ function Search() {
                 ))}
               </List>
             ) : (
-              <p className="display-message text-center mt-5">No Results to Display</p>
+              <p className="display-message text-center mt-5">Nothing to display</p>
             )}
             </Card>
           </Col>
