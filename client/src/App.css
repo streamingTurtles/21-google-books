@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -21,4 +21,34 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+} */
+
+
+
+body {
+  font-family: 'Noto Sans JP', sans-serif !important;
+}
+
+.btn {
+  box-shadow: none !important; 
+  border: none !important;
+}
+
+.btn:hover {
+  box-shadow: none !important; 
+  border: none !important;
+}
+
+.form-control {
+  box-shadow: none !important; 
+  border: none !important;
+}
+
+.FormBtn {
+  box-shadow: none !important; 
+}
+
+.btn:focus {
+  background-color: #1cc45c !important;
+  cursor: pointer !important;
 }
