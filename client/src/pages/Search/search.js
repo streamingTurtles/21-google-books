@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Jumbotron from "../../components/Jumbotron/";
 import API from "../../utils/API";
-import CardBody from "../../components/cardBody/cardBody";
+import CardBody from "../../components/CardBody/cardbody";
 import Card from "../../components/Card/card"
-import SaveBtn from "../../components/saveBtn/saveBtn"
-import ViewBtn from "../../components/viewBtn/viewBtn"
+import SaveBtn from "../../components/SaveBtn/saveBtn"
+import ViewBtn from "../../components/ViewBtn/viewBtn"
 import { Col, Row, Container } from "../../components/Grid/";
 import { List, ListItem } from "../../components/List";
 import { Input, FormBtn } from "../../components/Form/form";

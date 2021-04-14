@@ -3,10 +3,10 @@ import Jumbotron from "../../components/Jumbotron";
 import API from "../../utils/API";
 import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
-import CardBody from "../../components/cardBody/cardBody";
+import CardBody from "../../components/CardBody/cardbody";
 import Card from "../../components/Card/card";
 import DeleteBtn from "../../components/DeleteBtn/deleteBtn"
-import ViewBtn from "../../components/viewBtn/viewBtn"
+import ViewBtn from "../../components/ViewBtn/viewBtn"
 
 function Search() {
   // Set the components initial state
