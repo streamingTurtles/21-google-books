@@ -6,7 +6,7 @@ import { List, ListItem } from "../../components/List";
 import Card from "../../components/Card/card";
 import TheCardBody from "../../components/CardBody/cardBodyCopy";
 import DeleteBtn from "../../components/DeleteBtn/deleteBtn"
-import ViewBtn from "../../components/ViewBtn/viewBtn"
+import TheViewBtn from "../../components/ViewBtn/viewBtnCopy"
 
 function Search() {
   // Set the components initial state
@@ -50,7 +50,7 @@ function Search() {
                           handleDeleteSubmit={handleDeleteSubmit}
                           id={book._id}
                         />
-                        <ViewBtn
+                        <TheViewBtn
                           link={book.link}
                         />
                         <TheCardBody

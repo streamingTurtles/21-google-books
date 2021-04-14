@@ -4,7 +4,7 @@ import API from "../../utils/API";
 import Card from "../../components/Card/card"
 import TheCardBody from "../../components/CardBody/cardBodyCopy";
 import TheSaveBtn from "../../components/SaveBtn/saveBtnCopy"
-import ViewBtn from "../../components/ViewBtn/viewBtn"
+import TheViewBtn from "../../components/ViewBtn/viewBtnCopy"
 import { Col, Row, Container } from "../../components/Grid/";
 import { List, ListItem } from "../../components/List";
 import { Input, FormBtn } from "../../components/Form/form";
@@ -91,7 +91,7 @@ function Search() {
                         >
                           <i className="far fa-heart"></i>
                         </TheSaveBtn>
-                        <ViewBtn
+                        <TheViewBtn
                           link={book.link}
                         />
                         <TheCardBody
