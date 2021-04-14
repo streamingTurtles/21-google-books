@@ -9,6 +9,7 @@ import { Col, Row, Container } from "../../components/Grid/";
 import { List, ListItem } from "../../components/List";
 import { Input, FormBtn } from "../../components/Form/form";
 
+
 import "../../pages/Search/styles.css"
 
 function Search() {
