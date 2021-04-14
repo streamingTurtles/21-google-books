@@ -3,8 +3,8 @@ import Jumbotron from "../../components/Jumbotron";
 import API from "../../utils/API";
 import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
-import CardBody from "../../components/CardBody/cardbody";
 import Card from "../../components/Card/card";
+import TheCardBody from "../../components/CardBody/cardBodyCopy";
 import DeleteBtn from "../../components/DeleteBtn/deleteBtn"
 import ViewBtn from "../../components/ViewBtn/viewBtn"
 
@@ -53,7 +53,7 @@ function Search() {
                         <ViewBtn
                           link={book.link}
                         />
-                        <CardBody
+                        <TheCardBody
                           key={book.id}
                           title={book.title}
                           authors={book.authors}

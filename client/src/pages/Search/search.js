@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Jumbotron from "../../components/Jumbotron/";
 import API from "../../utils/API";
-import CardBody from "../../components/CardBody/cardbody";
 import Card from "../../components/Card/card"
+import TheCardBody from "../../components/CardBody/cardBodyCopy";
 import SaveBtn from "../../components/SaveBtn/saveBtn"
 import ViewBtn from "../../components/ViewBtn/viewBtn"
 import { Col, Row, Container } from "../../components/Grid/";
@@ -94,7 +94,7 @@ function Search() {
                         <ViewBtn
                           link={book.link}
                         />
-                        <CardBody
+                        <TheCardBody
                           key={book.id}
                           title={book.title}
                           authors={book.authors}
