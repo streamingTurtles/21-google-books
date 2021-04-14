@@ -3,7 +3,7 @@ import Jumbotron from "../../components/Jumbotron/";
 import API from "../../utils/API";
 import Card from "../../components/Card/card"
 import TheCardBody from "../../components/CardBody/cardBodyCopy";
-import SaveBtn from "../../components/SaveBtn/saveBtn"
+import TheSaveBtn from "../../components/SaveBtn/saveBtnCopy"
 import ViewBtn from "../../components/ViewBtn/viewBtn"
 import { Col, Row, Container } from "../../components/Grid/";
 import { List, ListItem } from "../../components/List";
@@ -85,12 +85,12 @@ function Search() {
                 {books.map(book => (
                   <ListItem key={book.id}>
                       <Card>
-                      <SaveBtn
+                      <TheSaveBtn
                           handleSaveSubmit={handleSaveSubmit}
                           bookData={book}
                         >
                           <i className="far fa-heart"></i>
-                        </SaveBtn>
+                        </TheSaveBtn>
                         <ViewBtn
                           link={book.link}
                         />
