@@ -21,7 +21,7 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 
 // Connect to a local Mongo DB or to the Heroku mongoose db
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist",
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/googlebooks",
 {
   useNewUrlParser: true,
   useUnifiedTopology: true,

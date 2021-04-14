@@ -12,11 +12,11 @@ import { Input, FormBtn } from "../../components/Form/form";
 import "../../pages/Search/styles.css"
 
 function Search() {
-  // Setting our component's initial state
+  // Set component's initial state
   const [books, setBooks] = useState([])
   const [searchTerm, setSearchTerm] = useState("")
 
-  // Loads all books and sets them to books
+  // Loading & seting to books
   function loadBooks() {
     API.getBooksByTitle(searchTerm)
       .then(res => {
@@ -26,13 +26,13 @@ function Search() {
       .catch(err => console.log(err));
   };
 
-  // Handles updating component state when the user types into the input field
+  //  updating component state when the user types into the input field
   function handleInputChange(event) {
     const { value } = event.target;
     setSearchTerm( value.replace(/\s/g, '') );
   };
 
-  // When the form is submitted, use the API.saveBook method to save the book data
+  
   function handleSearchSubmit(event) {
     event.preventDefault();
     if (searchTerm) {
@@ -66,7 +66,7 @@ function Search() {
                 onChange={handleInputChange}
                 name="title"
                 style={{ textAlign: "center", backgroundColor: "rgb(232,240,254)" }}
-                placeholder='Type in your book search i.e. "Fullstack React"'
+                placeholder='Type in your book search'
               />
               <FormBtn
                 style={{ textAlign: "center", backgroundColor: "rgb(232,240,254)" }}

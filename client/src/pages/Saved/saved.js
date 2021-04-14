@@ -21,10 +21,10 @@ function Search() {
       .catch(err => console.log(err));
   }, [])
 
-  // Deletes a book from the database with a given id, then reloads books from the db
+  // Deletes a book from the database with a specific id, and reloads books from the db
   function handleDeleteSubmit(id) {
     API.deleteBook(id)
-    // Filter to return true - if the current book id doesn't include the id that we're deleting, we're going to keep it)
+    // Filter to return true - if the current book id isn't the id that we're deleting, keep it)
     setBooks(books.filter((book) => {
         return book._id !== id;
     }))
@@ -35,8 +35,8 @@ function Search() {
         <Row>
           <div className="hero">
             <Jumbotron>
-              <h1>React Google Books Search</h1>
-              <h5>Searched & Saved Books of Interest</h5>
+              <h1>React Google Books Search App</h1>
+              <h5>Searched and Saved Books of Interest</h5>
             </Jumbotron>
           </div>
           <Col size="md-12">
