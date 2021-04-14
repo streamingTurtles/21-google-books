@@ -3,7 +3,7 @@ import axios from "axios";
 // my google books api key
 const apiKey = "AIzaSyCyG_qBeit_4b5tfm0mjC4l3Tt7SetX6BU"
 
-  // Send request to google books to find searched book
+  // Google API request to find searched book
   export default {
     getBooksByTitle: function(title) {
         return new Promise((resolve, reject) => {
@@ -29,19 +29,19 @@ const apiKey = "AIzaSyCyG_qBeit_4b5tfm0mjC4l3Tt7SetX6BU"
             .catch(err => reject(err));
         });
     },
-  // get all books
+  // gets all books
   getBooks: function() {
     return axios.get("/api/books");
   },
-  // get the book with specific id
+  // get book with the given id
   getBook: function(id) {
     return axios.get("/api/books/" + id);
   },
-  // delete book with specific id
+  // deletes book with given id
   deleteBook: function(id) {
     return axios.delete("/api/books/" + id);
   },
-  // save the book to the googlebooks db
+  // saves te book to the database
   saveBook: function(bookData) {
     return axios.post("/api/books", bookData);
   }

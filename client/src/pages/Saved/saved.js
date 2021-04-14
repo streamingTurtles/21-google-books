@@ -3,16 +3,16 @@ import Jumbotron from "../../components/Jumbotron";
 import API from "../../utils/API";
 import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
-import CardBody from "../../components/CardBody/cardBody";
+import CardBody from "../../components/cardBody/cardBody";
 import Card from "../../components/Card/card";
-import ViewButton from "../../components/ViewButton/viewButton"
-import DeleteButton from "../../components/DeleteButton/deleteButton"
+import DeleteBtn from "../../components/DeleteBtn/deleteBtn"
+import ViewBtn from "../../components/viewBtn/viewBtn"
 
 function Search() {
-  // Setting component's initial state/s
+  // Set the components initial state
   const [books, setBooks] = useState([])
 
-  // Load books from the database
+  // getBooks books from database
   useEffect(() => {
     API.getBooks()
     .then(res => 
@@ -24,9 +24,9 @@ function Search() {
   // Deletes a book from the database with a specific id, and reloads books from the db
   function handleDeleteSubmit(id) {
     API.deleteBook(id)
-    // Filter to return true - if the current book id isn't the id that we're deleting, keep it)
+     // when the current book id doesn't match the id that we're deleting, leave it in the db
     setBooks(books.filter((book) => {
-        return book._id !== id;
+        return book._id != id;
     }))
   }
 
@@ -35,8 +35,8 @@ function Search() {
         <Row>
           <div className="hero">
             <Jumbotron>
-              <h1>React Google Books Search App</h1>
-              <h5>Searched and Saved Books of Interest</h5>
+              <h1>React Google Books Search</h1>
+              <h5>Your Searched and Saved Books of Interest</h5>
             </Jumbotron>
           </div>
           <Col size="md-12">
@@ -46,11 +46,11 @@ function Search() {
                 {books.map(book => (
                   <ListItem key={book.id}>
                       <Card>
-                      <DeleteButton
+                      <DeleteBtn
                           handleDeleteSubmit={handleDeleteSubmit}
                           id={book._id}
                         />
-                        <ViewButton
+                        <ViewBtn
                           link={book.link}
                         />
                         <CardBody
@@ -65,7 +65,7 @@ function Search() {
                 ))}
               </List>
             ) : (
-              <p className="display-message text-center mt-5">Nothing Saved Yet</p>
+              <p className="display-message text-center mt-5">You don't have any books saved yet!</p>
             )}
             </Card>
           </Col>

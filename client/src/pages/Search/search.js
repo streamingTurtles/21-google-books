@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Jumbotron from "../../components/Jumbotron/";
 import API from "../../utils/API";
-import CardBody from "../../components/CardBody/cardBody";
+import CardBody from "../../components/cardBody/cardBody";
 import Card from "../../components/Card/card"
-import SaveButton from "../../components/SaveButton/saveButton"
-import ViewButton from "../../components/ViewButton/viewButton"
+import SaveBtn from "../../components/saveBtn/saveBtn"
+import ViewBtn from "../../components/viewBtn/viewBtn"
 import { Col, Row, Container } from "../../components/Grid/";
 import { List, ListItem } from "../../components/List";
 import { Input, FormBtn } from "../../components/Form/form";
@@ -32,7 +32,7 @@ function Search() {
     setSearchTerm( value.replace(/\s/g, '') );
   };
 
-  
+  // prevent page refresh
   function handleSearchSubmit(event) {
     event.preventDefault();
     if (searchTerm) {
@@ -56,8 +56,8 @@ function Search() {
         <Row>
           <div className="hero">
             <Jumbotron>
-              <h1>Google Books Search App</h1>
-              <h5>using the Google Books API</h5>
+              <h1>Google Books Search</h1>
+              <h5>from Google Books API</h5>
             </Jumbotron>
           </div>
           <Col size="md-12">
@@ -66,7 +66,7 @@ function Search() {
                 onChange={handleInputChange}
                 name="title"
                 style={{ textAlign: "center", backgroundColor: "rgb(232,240,254)" }}
-                placeholder='Type in your book search'
+                placeholder='Enter your search here'
               />
               <FormBtn
                 style={{ textAlign: "center", backgroundColor: "rgb(232,240,254)" }}
@@ -84,13 +84,13 @@ function Search() {
                 {books.map(book => (
                   <ListItem key={book.id}>
                       <Card>
-                      <SaveButton
+                      <SaveBtn
                           handleSaveSubmit={handleSaveSubmit}
                           bookData={book}
                         >
                           <i className="far fa-heart"></i>
-                        </SaveButton>
-                        <ViewButton
+                        </SaveBtn>
+                        <ViewBtn
                           link={book.link}
                         />
                         <CardBody
@@ -105,7 +105,7 @@ function Search() {
                 ))}
               </List>
             ) : (
-              <p className="display-message text-center mt-5">Nothing to display</p>
+              <p className="display-message text-center mt-5">No Results to Display</p>
             )}
             </Card>
           </Col>

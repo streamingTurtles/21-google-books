@@ -8,7 +8,7 @@
   - [Contribution Guidelines](#contribution-guidelines)
   - [License Type](#license-type)
   - [Github Repo Link](#github-repo-link)
-  - [HEROKU Live APP Link](https://streamingturtles.github.io/19-employee-directory/)
+  - [HEROKU Live APP Link](https://pure-stream-19353.herokuapp.com/)
   - [Github Information](#github-information)
   - [my-email-for-questions-and-information](#my-email-for-questions-and-information)
 
@@ -16,7 +16,7 @@
 
   - - -
  
-  ## Screenshot of App: (searchinf for a book using the google API ):
+  ## Screenshot of App: (searching for a book using the google API ):
   ![Screenshot](/client/public/googleBookSearch-pic1.png)
    
 
@@ -37,7 +37,7 @@
   &nbsp;
   - - -
   ## Project Usage Information:
-  - To be able to search the google API and save your searches
+  - To be able to search the google Book API and save your Book searches
 
   &nbsp;
   - - -
